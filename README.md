@@ -213,7 +213,7 @@ The same approach can be made to make a LaTeX table from a data frame:
 
 function df_to_table(df, label="label", caption="caption")
 	fmt = repeat("c", length(df))
-    row = join(["{{$x}}" for x in map(string, names(df))], " & ")
+    row = join(["{{:$x}}" for x in map(string, names(df))], " & ")
 
 tpl="""
 \\begin{table}
